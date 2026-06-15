@@ -14,21 +14,7 @@ import re
 # ==========================================
 # 1. FRONTEND CONFIGURATION & AUTO-SUBMIT
 # ==========================================
-st.set_page_config(page_title="Echo Chamber Analytics Engine", layout="centered")
-st.title("🌐 Live Echo Chamber Analytics Engine")
-st.markdown("### First-Principle NLP & Polarization Analytics Pipeline")
-
-
-preset_topic = st.selectbox(
-    "🔥 Select a Trending Target to Analyze:", 
-    ["Nvidia", "Bitcoin", "Tesla", "Apple", "Custom Keyword Search..."]
-)
-
-
-if preset_topic == "Custom Keyword Search...":
-    search_query = st.text_input("Enter custom brand or keyword:", "Artificial Intelligence")
-else:
-    search_query = preset_topic
+https://github.com/Aldritch001/echo-chamber-analytics-engine
 
 # ==========================================
 # 2. LIVE STREAM INGESTION 
