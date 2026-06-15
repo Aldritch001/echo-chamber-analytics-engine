@@ -18,18 +18,18 @@ st.set_page_config(page_title="Echo Chamber Analytics Engine", layout="centered"
 st.title("🌐 Live Echo Chamber Analytics Engine")
 st.markdown("### First-Principle NLP & Polarization Analytics Pipeline")
 
-# Premium SaaS Upgrade: Changing this dropdown instantly updates the analytics state
+# Premium SaaS Upgrade
 preset_topic = st.selectbox(
     "🔥 Select a Trending Target to Analyze (Launches Instantly):", 
     ["Nvidia", "Bitcoin", "Tesla", "Apple", "Custom Keyword Search..."]
 )
 
-# Seamlessly handle user input toggles with a premium payment gate
+
 if preset_topic == "Custom Keyword Search...":
     st.divider()
     st.warning("🔒 PRO FEATURE LOCKED: Custom Keyword Deep-Scans require a Pro License.")
     
-    # Clean Container using Native Streamlit Blocks (Bypasses iframe security bugs)
+    #Native Streamlit Blocks 
     with st.container(border=True):
         st.subheader("Unlock Unlimited Custom Keyword Searches")
         st.write("Scan any custom brand, crypto asset, or competitor token instantly.")
@@ -95,7 +95,7 @@ def load_ml_pipeline():
 
 classifier, vectorizer = load_ml_pipeline()
 
-# Run data ingestion pipeline automatically on state changes
+# Run data ingestion pipeline
 with st.spinner(f"Intercepting real-time narrative coordinates for '{search_query}'..."):
     df = fetch_live_narratives(search_query)
     
@@ -162,7 +162,7 @@ with col2:
     * **Linguistic Focus:** The text records show heavy structural repetition around the context terms: {top_terms_str}.
     """)
     
-    # Isolate and explain the primary conversational cluster group dynamically
+    # Isolate and explain the primary conversational cluster group
     largest_cluster_id = df['cluster_group'].value_counts().idxmax()
     cluster_df = df[df['cluster_group'] == largest_cluster_id]
     dominant_cluster_sentiment = cluster_df['sentiment'].value_counts().index[0]
