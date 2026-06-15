@@ -37,7 +37,7 @@ if preset_topic == "Custom Keyword Search...":
         # Native, safe Streamlit button that forces a clean new browser tab
         st.link_button(
             "🚀 Upgrade via PayPal", 
-            url="https://paypal.me/NoirMaguus", 
+            url="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-3A605907YP895702VNIYGBJI", 
             type="primary",
             use_container_width=True
         )
