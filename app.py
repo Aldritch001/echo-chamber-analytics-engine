@@ -29,18 +29,18 @@ if preset_topic == "Custom Keyword Search...":
     st.divider()
     st.warning("🔒 PRO FEATURE LOCKED: Custom Keyword Deep-Scans require a Pro License.")
     
-    # Elegant CSS Custom Payment Button
-    st.markdown("""
-    <div style="text-align: center; padding: 20px; border: 2px dashed #FD504D; border-radius: 10px; background-color: #111111; margin-bottom: 25px;">
-        <h4 style="color: white; margin-top: 0;">Unlock Unlimited Custom Keyword Searches</h4>
-        <p style="color: #cccccc; font-size: 14px;">Scan any custom brand, crypto asset, or competitor token instantly.</p>
-        <a href="https://paypal.me/NoirMaguus" target="_blank">
-            <button style="background-color:#FD504D; color:white; border:none; padding:12px 24px; border-radius:5px; cursor:pointer; font-size:16px; font-weight: bold; width: 100%;">
-                🚀 Upgrade to Pro for $10 / month
-            </button>
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
+    # Clean Container using Native Streamlit Blocks (Bypasses iframe security bugs)
+    with st.container(border=True):
+        st.subheader("Unlock Unlimited Custom Keyword Searches")
+        st.write("Scan any custom brand, crypto asset, or competitor token instantly.")
+        
+        # Native, safe Streamlit button that forces a clean new browser tab
+        st.link_button(
+            "🚀 Upgrade via PayPal", 
+            url="https://paypal.me/NoirMaguus", 
+            type="primary",
+            use_container_width=True
+        )
     
     # Freeze execution or default to a safe preview term so they see the dashboard layout below
     search_query = "Artificial Intelligence"
