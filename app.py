@@ -14,7 +14,39 @@ import re
 # ==========================================
 # 1. FRONTEND CONFIGURATION & AUTO-SUBMIT
 # ==========================================
-https://github.com/Aldritch001/echo-chamber-analytics-engine
+st.set_page_config(page_title="Echo Chamber Analytics Engine", layout="centered")
+st.title("🌐 Live Echo Chamber Analytics Engine")
+st.markdown("### First-Principle NLP & Polarization Analytics Pipeline")
+
+# Premium SaaS Upgrade: Changing this dropdown instantly updates the analytics state
+preset_topic = st.selectbox(
+    "🔥 Select a Trending Target to Analyze (Launches Instantly):", 
+    ["Nvidia", "Bitcoin", "Tesla", "Apple", "Custom Keyword Search..."]
+)
+
+# Seamlessly handle user input toggles with a premium payment gate
+if preset_topic == "Custom Keyword Search...":
+    st.divider()
+    st.warning("🔒 PRO FEATURE LOCKED: Custom Keyword Deep-Scans require a Pro License.")
+    
+    # Elegant CSS Custom Payment Button
+    st.markdown("""
+    <div style="text-align: center; padding: 20px; border: 2px dashed #FD504D; border-radius: 10px; background-color: #111111; margin-bottom: 25px;">
+        <h4 style="color: white; margin-top: 0;">Unlock Unlimited Custom Keyword Searches</h4>
+        <p style="color: #cccccc; font-size: 14px;">Scan any custom brand, crypto asset, or competitor token instantly.</p>
+        <a href="https://buy.stripe.com/mock_placeholder_link" target="_blank">
+            <button style="background-color:#FD504D; color:white; border:none; padding:12px 24px; border-radius:5px; cursor:pointer; font-size:16px; font-weight: bold; width: 100%;">
+                🚀 Upgrade to Pro for R150 / month
+            </button>
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Freeze execution or default to a safe preview term so they see the dashboard layout below
+    search_query = "Artificial Intelligence"
+    st.info("💡 Displaying 'Artificial Intelligence' demo matrix below. Upgrade to unlock your custom input.")
+else:
+    search_query = preset_topic
 
 # ==========================================
 # 2. LIVE STREAM INGESTION 
