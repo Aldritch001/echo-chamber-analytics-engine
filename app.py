@@ -34,7 +34,7 @@ if preset_topic == "Custom Keyword Search...":
     <div style="text-align: center; padding: 20px; border: 2px dashed #FD504D; border-radius: 10px; background-color: #111111; margin-bottom: 25px;">
         <h4 style="color: white; margin-top: 0;">Unlock Unlimited Custom Keyword Searches</h4>
         <p style="color: #cccccc; font-size: 14px;">Scan any custom brand, crypto asset, or competitor token instantly.</p>
-        <a href="https://buy.stripe.com/mock_placeholder_link" target="_blank">
+        <a href="https://paypal.me/NoirMaguus" target="_blank">
             <button style="background-color:#FD504D; color:white; border:none; padding:12px 24px; border-radius:5px; cursor:pointer; font-size:16px; font-weight: bold; width: 100%;">
                 🚀 Upgrade to Pro for $10 / month
             </button>
